@@ -50,19 +50,32 @@ export const posts = [
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     imageURL:
-      "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687609/retina_1708x683_0521-react-redux-and-immutablejs-Waldek_Newsletter-993b50f4ae56e9ee6e024a309c23a6c4.png",
+      "reactjs.png",
+  },
+  {
+    title: "React-Redux",
+    content:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    imageURL:
+      "react-redux.jpg",
+  },
+  {
+    title: "Typescript",
+    content:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    imageURL: "ts.jpeg",
+  },
+  {
+    title: "Javascript",
+    content:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    imageURL: "js.webp",
   },
   {
     title: "NestJs",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     imageURL:
-      "https://camo.githubusercontent.com/0d358238ba8c67946e6555aad926b947e1a5048f/68747470733a2f2f6e6573746a732e636f6d2f696d672f6c6f676f5f746578742e737667",
-  },
-  {
-    title: "Typescript",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    imageURL: "https://miro.medium.com/max/1024/1*3CiMgJkSbc2drJMduoAzKA.jpeg",
+      "nestjs.png",
   },
 ];
