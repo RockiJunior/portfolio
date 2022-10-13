@@ -1,26 +1,24 @@
 import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
-import {posts}  from "../profileSkills";
+import { posts } from "../profileSkills.js";
 
-const Post = () => {
+
+const Post = ({props}) => {
   const router = useRouter();
-  console.log(router.query.title)
-
   const currentPost = posts.filter(
-    (post) => post.title === router.query.title
-  )[0];
+    post => post.title === router.query.title
+  )[0]
   console.log(currentPost)
-
   return (
-    <Layout footer={false} title={currentPost.title}>
+    <Layout footer={false} title={currentPost && currentPost.title}>
       <div className="text-center">
         <img
-          src={currentPost.imageURL}
+          src={currentPost && currentPost.imageURL}
           alt=""
           className="img-fluid"
           style={{ width: "50%" }}
         />
-        <p>{currentPost.content}</p>
+        <p>{currentPost && currentPost.content}</p>
       </div>
     </Layout>
   );

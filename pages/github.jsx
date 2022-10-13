@@ -27,7 +27,6 @@ const Github = ({ user, statusCode }) => {
             <img src={user.avatar_url} alt="" />
             <a
               href={user.html_url}
-              target="_blank"
               className="btn btn-outline-secondary"
             >
               Go to My Github Profile

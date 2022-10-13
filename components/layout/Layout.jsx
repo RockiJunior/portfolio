@@ -9,7 +9,6 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
-      console.log(url);
       NProgress.start();
     };
     router.events.on("routeChangeStart", handleRouteChange);
@@ -19,7 +18,7 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  }, []);
+  }, [router.events]);
   return (
     <div className={Classnames({ "bg-dark": dark, 'bg-light': !dark })}>
       <Navbar />
