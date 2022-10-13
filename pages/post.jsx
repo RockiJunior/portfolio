@@ -1,13 +1,15 @@
 import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
-import { posts } from "../profileSkills";
+import {posts}  from "../profileSkills";
 
-const post = () => {
+const Post = () => {
   const router = useRouter();
+  console.log(router.query.title)
 
   const currentPost = posts.filter(
     (post) => post.title === router.query.title
   )[0];
+  console.log(currentPost)
 
   return (
     <Layout footer={false} title={currentPost.title}>
@@ -24,4 +26,4 @@ const post = () => {
   );
 };
 
-export default post;
+export default Post;
