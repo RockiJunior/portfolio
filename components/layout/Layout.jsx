@@ -34,7 +34,7 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
       {footer && (
         <footer className="bg-dark text-light text-center">
           <div className="container p-4">
-            <h1>&copy; Gabriel Villarroel Portfolio</h1>
+            <h1 className="text-light">&copy; Gabriel Villarroel Portfolio</h1>
             <p> 1994 - {new Date().getFullYear()}</p>
             <p>All Rights Reserved.</p>
           </div>
