@@ -70,7 +70,7 @@ export const projects = [
 		title: 'Drops',
 		description:
 			'I worked and finished a project with my team in a period of 3 weeks that consists of a web application to buy and promote Premium shoes and sneakers online. We integrate services and libraries such as Mercado Pago, Multer-Cloudinary, Material UI, Json Web Token, Node.js, express, PostgreSQL, Sequelize, React-Redux, CSS, HTML. - We Deploy the Backend in Heroku, and Vercel for the Frontend.',
-		image: 'portfolio1.jpeg',
+		image: 'drops2.jpg',
 		projectURL: 'https://drops.vercel.app/',
 	},
 ];
