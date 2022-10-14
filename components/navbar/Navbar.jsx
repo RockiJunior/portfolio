@@ -20,8 +20,8 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link href="/blog">
-                <a className="nav-link">Blog</a>
+              <Link href="/knowledges">
+                <a className="nav-link">Knowledges</a>
               </Link>
             </li>
             <li className="nav-item">
