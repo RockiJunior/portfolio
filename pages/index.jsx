@@ -1,6 +1,8 @@
 import Layout from '../components/layout/Layout';
 import { profileSkills, experiences, projects } from '../profileSkills';
+import Experiences from '../components/experiences/Experiences';
 import Link from 'next/link';
+import Script from 'next/script';
 const Index = () => {
 	return (
 		<>
@@ -17,21 +19,21 @@ const Index = () => {
 									<h1>Gabriel Sebastián Villarroel</h1>
 									<h3>FullStack Developer</h3>
 									<p>
-										'm a full stack mid-level developer from Argentina. I was
+										&apos;m a full stack mid-level developer from Argentina. I was
 										recently working with a company called econocom-gigigo,
 										where I was able to focus and train on the backend, using
-										nestjs, typescript, typeorm, and other technologies.
-										I was a student at SoyHenry Bootcamp, where I learned the
-										basics of programming from teachers and teammates, using
-										javascript, react, and many other technologies. I consider
-										myself a proactive person with a great desire to learn and
-										continue to grow! If you are interested in my profile, click
-										the following button, and it will take you to form where
-										you can contact me. Thanks a lot!!!
+										nestjs, typescript, typeorm, and other technologies. I was a
+										student at SoyHenry Bootcamp, where I learned the basics of
+										programming from teachers and teammates, using javascript,
+										react, and many other technologies. I consider myself a
+										proactive person with a great desire to learn and continue
+										to grow! If you are interested in my profile, click the
+										following button, and it will take you to form where you can
+										contact me. Thanks a lot!!!
 									</p>
-									<a href="/hire-me" className="text-light">
-										Hire Me!
-									</a>
+									<Link href="/contactForm">
+										<a className=" btn btn-outline-info rounded-5">Hire Me!</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -65,18 +67,21 @@ const Index = () => {
 							<div className="card-body">
 								<h1>Experience</h1>
 								<ul>
-									{experiences.map(({ title, from, to, description }, i) => (
-										<li key={i}>
-											<h3>{title}</h3>
-											<h5>
-												{from}-{to}
-											</h5>
-											<p>{description}</p>
-										</li>
+									{experiences.map(({ id, title, from, to, description }) => (
+										<Experiences
+											id={id}
+											key={id}
+											title={title}
+											from={from}
+											to={to}
+											description={description}
+										/>
 									))}
 								</ul>
-								<Link href="/experiences">
-									<a className="btn btn-light">Know More</a>
+								<Link href={`/jobDetail`}>
+									<a className="btn btn-outline-info rounded-5 m-1">
+										Know More
+									</a>
 								</Link>
 							</div>
 						</div>
@@ -104,7 +109,11 @@ const Index = () => {
 										<h3>{title}</h3>
 										<p>{description}</p>
 										<Link href="https://drops.vercel.app/">
-											<a target="_blank" rel="noopener noreferrer">
+											<a
+												target="_blank"
+												rel="noopener noreferrer"
+												className="btn btn-outline-info rounded-5"
+											>
 												go to project...
 											</a>
 										</Link>
@@ -116,7 +125,7 @@ const Index = () => {
 							<div className="text-center">
 								<Link href="https://github.com/RockiJunior?tab=repositories">
 									<a
-										className="btn btn-outline-light"
+										className="btn btn-outline-info rounded-5 m-2"
 										target="_blank"
 										rel="noopener noreferrer"
 									>{`More Projects... (github)`}</a>
@@ -126,6 +135,7 @@ const Index = () => {
 					</div>
 				</section>
 			</Layout>
+			<Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
 		</>
 	);
 };

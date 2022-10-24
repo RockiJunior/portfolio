@@ -1,9 +1,9 @@
-import Layout from '../components/layout/Layout';
-import Error from './_error';
-import Link from 'next/link';
+import Layout from "../components/layout/Layout";
+import Error from "./_error";
+import Link from "next/link";
 
 export async function getServerSideProps() {
-	const res = await fetch('https://api.github.com/users/RockiJunior');
+	const res = await fetch("https://api.github.com/users/RockiJunior");
 	const data = await res.json();
 
 	const statusCode = res.status > 200 ? res.status : false;
@@ -32,13 +32,17 @@ const Github = ({ user, statusCode }) => {
 						/>
 						<div>
 							<p className="text-secondary">
-								Welcome! if you are interested in my Repo's & my code, Click the
-								next button and you be redirected to my github profile.{' '}
+								Welcome! if you are interested in my Repo&apos;s & my code, Click the
+								next button and you be redirected to my github profile.{" "}
 								<strong> Thank you!</strong>
 							</p>
 						</div>
 						<Link href={user.html_url}>
-							<a className="btn btn-outline-primary rounded">
+							<a
+								className="btn btn-outline-info rounded-5"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Go to My Github Profile
 							</a>
 						</Link>

@@ -42,22 +42,24 @@ export const profileSkills = [
 
 export const experiences = [
 	{
+		id: 1,
 		title: 'FullStack Web Developer | Henry Bootcamp',
 		description:
 			'Development of web applications such as individual and group technical evaluations for the Bootcamp',
 		details:
-			'Aprendí a trabajar en equipo y tomar desiciones en conjunto para optimizar el desarrollo de acuerdo al tiempo de entrega. Trabajé en diferentes modelos de DB con postgreSQL-sequelize; Modularización de Actions/Reducers de parte del Frontend; Aprobaciones de pull requests en Github. Integración de librerias para subir imágenes a una plataforma externa y también guardarlas en localmente (Multer-Cloudinary); Mayormente Enfocado en el área de Backend y desarrollo de endpoints para consultas a base de datos',
+			'I learned to work as a team and make decisions together to optimize the development according to the delivery time. I worked on different DB models with postgreSQL-sequelize; Modularization of Actions/Reducers by the Frontend; Pull request approvals on Github. Integration of libraries to upload images to an external platform and also save them locally (Multer-Cloudinary); Mainly Focused on the Backend area and development of endpoints for database queries',
 		projects:
 			'Videogames Api -- Individual Project(Henry bootcamp) - 3 Weeks; Drops -- Final Team-Project(Henry bootcamp) - 1Month',
 		from: 'jul/2021',
 		to: 'nov/2021',
 	},
 	{
+		id: 2,
 		title: 'Backend Developer | Econocom-Gigigo',
 		description:
 			'Development of application for development of financial services, control of users, income and investments.',
 		details:
-			"Trabajo en equipo y analisis de los requerimientos, para optimización de funcionalidades y entrega de los mismos en los tiempos de entrega establecidos. Relaciones entre diferentes modelos de DB con MySQL-TypeORM; Modularización de componentes con NestJS; Integración de librerias como 'luxon' y 'multer'; Enfocado en área de Backend y desarrollo de endpoints para consultas a base de datos con la utilización de Swagger como aditivo para su documentación",
+			"Teamwork and analysis of the requirements, for optimization of functionalities and delivery of the same in the established delivery times. Relations between different DB models with MySQL-TypeORM; Component modularization with NestJS; Integration of libraries like 'luxon' and 'multer'; Focused on the Backend area and development of endpoints for database queries with the use of Swagger as an additive for its documentation.",
 		projects:
 			'Fincomun -- Financial Develop Company (Gigigo company) - 5 Months; Telcel -- Comunication Company (Gigigo company) - 1 Month',
 		from: 'abr/2022',
