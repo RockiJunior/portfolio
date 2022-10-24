@@ -78,11 +78,6 @@ const Index = () => {
 										/>
 									))}
 								</ul>
-								<Link href={`/jobDetail`}>
-									<a className="btn btn-outline-info rounded-5 m-1">
-										Know More
-									</a>
-								</Link>
 							</div>
 						</div>
 					</div>
