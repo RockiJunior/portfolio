@@ -6,7 +6,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>My Portfolio</title>
+        <title>Gabriel Villarroel</title>
       </Head>
       <Component {...pageProps} />
     </>

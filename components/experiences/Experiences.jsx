@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Experiences = (props) => {
 	const { id, title, description, from, to } = props;
 	return (
-		<li key={id} className="m-3">
+		<li key={id} className="m-3 border-bottom pb-3" >
 			<h3 className="m-0">{title}</h3>
 			<h5 className="m-0">
 				{from}-{to}

@@ -1,4 +1,6 @@
 import _error from '../../pages/_error.jsx';
+import { linkify } from '../../utils/linkify.js';
+
 const JobCard = ({ job }) => {
 	return (
 		<div className="row">
@@ -12,7 +14,11 @@ const JobCard = ({ job }) => {
 						<p style={{ fontFamily: 'initial', fontSize: '18px' }}>
 							{job.description}
 						</p>
-						<p>{job.details}</p>
+						<div
+							dangerouslySetInnerHTML={{
+								__html: linkify(job.details.replace(/\n/g, '<br><br>')),
+							}}
+						/>
 					</div>
 				</div>
 			) : (

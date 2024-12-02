@@ -1,6 +1,9 @@
 import Navbar from '../components/navbar/Navbar';
 import emailjs from 'emailjs-com';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const contactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -13,20 +16,38 @@ const contactForm = () => {
 			)
 			.then(
 				(res) => {
-					console.log(res.text);
+					console.log('Email enviado', res.text);
+					toast.success('Message sent successfully!', {
+						position: 'bottom-right',
+						autoClose: 3000,
+						hideProgressBar: false,
+						closeButton: true,
+						className: 'toast-success',
+						bodyClassName: 'toast-body',
+						toastId: 'success-toast',
+					});
 				},
 				(err) => {
 					console.log(err.text);
+					toast.error('Error sending message. Please try again later.', {
+						position: 'bottom-right',
+						autoClose: 3000,
+						hideProgressBar: false,
+						closeButton: true,
+						className: 'toast-error',
+						bodyClassName: 'toast-body',
+						toastId: 'error-toast',
+					});
 				}
 			);
 		e.target.reset();
 	};
 
 	return (
-		<div>
+		<>
 			<Navbar />
 			<div className="container text-center py-3">
-				<form onSubmit={sendEmail}>
+				<form onSubmit={(e) => sendEmail(e)}>
 					<div className="col-8 form-group mx-auto">
 						<input
 							type="text"
@@ -71,7 +92,8 @@ const contactForm = () => {
 					</div>
 				</form>
 			</div>
-		</div>
+			<ToastContainer />
+		</>
 	);
 };
 

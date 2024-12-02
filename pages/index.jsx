@@ -13,26 +13,27 @@ const Index = () => {
 						<div className="card card-body bg-dark text-light">
 							<div className="row">
 								<div className="col-md-4">
-									<img src="/perfil3.jpg" alt="" className="img-fluid" />
+									<img src="/perfil.jpeg" alt="" className="img-fluid" />
 								</div>
 								<div className="col-md-8">
 									<h1>Gabriel Sebastián Villarroel</h1>
 									<h3>FullStack Developer</h3>
 									<p>
-										&apos;m a full stack mid-level developer from Argentina. I was
-										recently working with a company called econocom-gigigo,
-										where I was able to focus and train on the backend, using
-										nestjs, typescript, typeorm, and other technologies. I was a
-										student at SoyHenry Bootcamp, where I learned the basics of
-										programming from teachers and teammates, using javascript,
-										react, and many other technologies. I consider myself a
-										proactive person with a great desire to learn and continue
-										to grow! If you are interested in my profile, click the
-										following button, and it will take you to form where you can
-										contact me. Thanks a lot!!!
+										I am a semi-senior Fullstack Web Developer with
+										approximately 3 year of professional experience. I'm
+										currently working in a agro company called Terratio, where
+										i'm able to focus and train on the fullstack path, using
+										nestjs, typescript, typeorm, reactjs, nextjs, and other
+										technologies. From a young age, I've been passionate about
+										acquiring new knowledge and solving problems, which is why I
+										believe I can excel in any type of work environment. I
+										consider myself a proactive person with a great desire to
+										learn and continue to grow! If you are interested in my
+										profile, click the following button, and it will take you to
+										form where you can contact me. Thanks a lot!!!
 									</p>
 									<Link href="/contactForm">
-										<a className=" btn btn-outline-info rounded-5">Hire Me!</a>
+										<a className="btn btn-outline-info rounded-5">Hire Me!</a>
 									</Link>
 								</div>
 							</div>
@@ -47,13 +48,14 @@ const Index = () => {
 								<h1>Skills</h1>
 								{profileSkills.map(({ skill, percentage }, i) => (
 									<div className="py-3" key={i}>
-										<div className="progress">
+										<div className="progress bg-light">
 											<h5>{skill}</h5>
 											<div
-												className="progress-bar bg-info"
+												className="progress-bar"
 												role="progressbar"
 												style={{
 													width: `${percentage}%`,
+													backgroundColor: '#1f9bcf',
 												}}
 											></div>
 										</div>
@@ -86,24 +88,31 @@ const Index = () => {
 				<section>
 					<div className="row card-body bg-dark">
 						<div className="col-md-12">
-							<div className="card card-body bg-dark">
+							<div className="card card-body bg-dark border-0">
 								<div className="row">
 									<div className="col-md-12 my-2">
-										<h1 className="text-center text-light">PortFolio</h1>
+										<h1 className="text-center text-light border-none">
+											Projects
+										</h1>
 									</div>
 								</div>
 							</div>
 						</div>
-						{projects.map(({ title, description, image }, i) => (
+						{projects.map(({ title, description, image, projectURL }, i) => (
 							<div className="col-md-4 p-2" key={i}>
 								<div className="card h-100">
 									<div className="overflow">
-										<img src={`/${image}`} alt="" className="card-img-top" />
+										<img
+											src={`/${image}`}
+											alt=""
+											className="card-img-top img-fluid"
+											style={{ height: '200px', objectFit: 'cover' }}
+										/>
 									</div>
-									<div className="card-body">
+									<div className="card-body d-flex flex-column justify-content-between">
 										<h3>{title}</h3>
-										<p>{description}</p>
-										<Link href="https://drops.vercel.app/">
+										<p dangerouslySetInnerHTML={{ __html: description }} />
+										<Link href={projectURL || '/404'}>
 											<a
 												target="_blank"
 												rel="noopener noreferrer"
