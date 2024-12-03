@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../components/layout/Layout";
 import Error from "./_error";
 import Link from "next/link";
@@ -26,7 +25,7 @@ const Github = ({ user, statusCode }) => {
 				<div className="col-md-4 offset-md-4">
 					<div className="card card-body text-center">
 						<h1 className="text-primary">{user.name}</h1>
-						<Image
+						<img
 							src={user.avatar_url}
 							alt=""
 							className="border-primary rounded"

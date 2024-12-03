@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Layout from '../components/layout/Layout';
 import { technologies } from '../profileSkills';
 import Link from 'next/link';
@@ -17,7 +16,7 @@ const PostCard = ({ post }) => {
 			>
 				<div style={{ flex: '0 1 10rem', overflow: 'hidden' }}>
 					<Link href={`/post?title=${post.title}`} as={`/post/${post.title}`}>
-						<Image
+						<img
 							src={post.imageURL}
 							alt=""
 							className="card-img-top rounded"

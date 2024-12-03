@@ -3,8 +3,6 @@ import { profileSkills, experiences, projects } from '../profileSkills';
 import Experiences from '../components/experiences/Experiences';
 import Link from 'next/link';
 import Script from 'next/script';
-import Image from 'next/image';
-
 const Index = () => {
 	return (
 		<>
@@ -15,7 +13,7 @@ const Index = () => {
 						<div className="card card-body bg-dark text-light">
 							<div className="row">
 								<div className="col-md-4">
-									<Image src="/perfil.jpeg" alt="" className="img-fluid" />
+									<img src="/perfil.jpeg" alt="" className="img-fluid" />
 								</div>
 								<div className="col-md-8">
 									<h1>Gabriel Sebastián Villarroel</h1>
@@ -104,7 +102,7 @@ const Index = () => {
 							<div className="col-md-4 p-2" key={i}>
 								<div className="card h-100">
 									<div className="overflow">
-										<Image
+										<img
 											src={`/${image}`}
 											alt=""
 											className="card-img-top img-fluid"
