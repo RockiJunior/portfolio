@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 import { useRouter } from 'next/router';
 import { technologies } from '../profileSkills.js';
+import Image from 'next/image.js';
 
 const Post = () => {
 	const router = useRouter();
@@ -15,7 +16,7 @@ const Post = () => {
 			title={currentPost && currentPost.title}
 		>
 			<div className="text-center">
-				<img
+				<Image
 					src={currentPost && currentPost.imageURL}
 					alt={currentPost && currentPost.title}
 					className="img-fluid rounded"

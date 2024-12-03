@@ -3,6 +3,8 @@ import { profileSkills, experiences, projects } from '../profileSkills';
 import Experiences from '../components/experiences/Experiences';
 import Link from 'next/link';
 import Script from 'next/script';
+import Image from 'next/image';
+
 const Index = () => {
 	return (
 		<>
@@ -13,18 +15,18 @@ const Index = () => {
 						<div className="card card-body bg-dark text-light">
 							<div className="row">
 								<div className="col-md-4">
-									<img src="/perfil.jpeg" alt="" className="img-fluid" />
+									<Image src="/perfil.jpeg" alt="" className="img-fluid" />
 								</div>
 								<div className="col-md-8">
 									<h1>Gabriel Sebastián Villarroel</h1>
 									<h3>FullStack Developer</h3>
 									<p>
 										I am a semi-senior Fullstack Web Developer with
-										approximately 3 year of professional experience. I'm
+										approximately 3 year of professional experience. I&apos;m
 										currently working in a agro company called Terratio, where
-										i'm able to focus and train on the fullstack path, using
+										i&apos;m able to focus and train on the fullstack path, using
 										nestjs, typescript, typeorm, reactjs, nextjs, and other
-										technologies. From a young age, I've been passionate about
+										technologies. From a young age, I&apos;ve been passionate about
 										acquiring new knowledge and solving problems, which is why I
 										believe I can excel in any type of work environment. I
 										consider myself a proactive person with a great desire to
@@ -102,7 +104,7 @@ const Index = () => {
 							<div className="col-md-4 p-2" key={i}>
 								<div className="card h-100">
 									<div className="overflow">
-										<img
+										<Image
 											src={`/${image}`}
 											alt=""
 											className="card-img-top img-fluid"
